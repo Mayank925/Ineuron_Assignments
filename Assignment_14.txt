@@ -1,0 +1,30 @@
+1. What does RGBA stand for?
+RGBA stands for red, green, blue, and alpha.
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+To get the RGBA value of an image using the Pillow module, you can use the getpixel() method on an Image object and pass in the x and y coordinates of the pixel as arguments.
+
+3. What is a box tuple, and how does it work?
+A box tuple is a tuple that represents a rectangular region in an image. The tuple contains four values: the x-coordinate of the left edge of the box, the y-coordinate of the upper edge of the box, the x-coordinate of the right edge of the box, and the y-coordinate of the lower edge of the box. This tuple can be used to crop or extract a region of an image.
+
+4. Use your image and load in notebook then, How can you find out the width and height of an Image object?
+To find out the width and height of an Image object in Python using the Pillow module, you can use the size attribute. For example, if you have an Image object named img, you can use img.size to get a tuple with the width and height of the image.
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left quarter of it?
+img = Image.open("image.jpg")
+width, height = img.size
+box = (0, height//2, width//2, height)
+cropped_img = img.crop(box)
+
+6. After making changes to an Image object, how could you save it as an image file?
+img.save("new_image.jpg", "JPEG", quality=80)
+
+7. What module contains Pillow’s shape-drawing code?
+The ImageDraw module contains Pillow's shape-drawing code.
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?
+
+from PIL import Image, ImageDraw
+
+img = Image.open("image.jpg")
+draw = ImageDraw.Draw(img)
