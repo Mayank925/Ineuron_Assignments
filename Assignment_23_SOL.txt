@@ -1,0 +1,35 @@
+﻿1.
+Result: The code prints 1 2 8.
+
+Explanation: The function func has default values for b and c. When calling func(1, 2), the provided values are assigned to a and b, 
+and the default value 8 is used for c.
+
+
+2. Result: The code prints 1 2 3.
+
+Explanation: The function func has default value 5 for c. 
+When calling func(1, c=3, b=2), the provided values are assigned to a, b, and c, overriding the default value of c.
+
+3. Result: The code prints 1 (2, 3).
+
+Explanation: The function func has a variable-length argument list *pargs, which collects additional positional arguments into a tuple.
+When calling func(1, 2, 3), a is assigned 1, and the remaining arguments 2 and 3 are collected into the tuple pargs.
+
+
+4. Result: The code prints 1 {'c': 3, 'b': 2}.
+
+Explanation: The function func has a variable-length keyword argument list **kargs, which collects additional keyword arguments into a dictionary. When calling func(a=1, c=3, b=2), a is assigned 1, 
+and the keyword arguments c=3 and b=2 are collected into the dictionary kargs.
+
+
+5. Result: The code prints 1 5 6 5.
+
+Explanation: The function func has default values for c and d. When calling func(1, *(5, 6)), the values are assigned to a, b, and *args, 
+and the default values 8 and 5 are used for c and d.
+
+
+6. Result: The code prints 1 ['x'] {'a': 'y'}.
+
+Explanation: The function func modifies the arguments passed to it. 
+After calling func(l, m, n), the values of l, m, and n are affected by the modifications made inside the function.
+
