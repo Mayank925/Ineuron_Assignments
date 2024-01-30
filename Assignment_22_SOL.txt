@@ -1,0 +1,38 @@
+﻿1.
+Result: The code prints iNeuron.
+
+Explanation: The function func does not have a local variable named X, so it looks for a global variable with that name. 
+It finds the global variable X with the value 'iNeuron' and prints it.
+
+
+2. Result: The code prints iNeuron.
+
+Explanation: The func function has a local variable X with the value 'NI!'. 
+However, this local variable is not the same as the global variable X. The global variable remains unaffected, so when you print it outside the function, 
+it still prints the global value 'iNeuron'.
+
+3. Result: The code prints:
+NI
+iNeuron
+Explanation: Inside the function func, a local variable X is created with the value 'NI', and 
+it is printed within the function. Outside the function, the global variable X with the value 'iNeuron' is printed.
+
+
+4. Result: The code prints NI.
+
+Explanation: The func function uses the global keyword to indicate that it is modifying the global variable X. 
+Therefore, after calling the function, the value of the global variable X changes to 'NI', and that's what gets printed.
+
+
+5. Result: The code prints:
+NI
+iNeuron
+Explanation: Inside the nested function, it prints the value of the local variable X from the enclosing scope, which is the variable X from the func function.
+Outside the function, the global variable X with the value 'iNeuron' is printed.
+
+
+6. Result: The code prints Spam.
+
+Explanation: The nonlocal keyword is used inside the nested function to indicate that it is modifying the variable X from the enclosing scope (func function).
+After calling nested, the value of X changes to 'Spam', and that's what gets printed.
+
